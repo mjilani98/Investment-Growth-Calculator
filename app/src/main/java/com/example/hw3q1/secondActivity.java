@@ -19,7 +19,7 @@ public class secondActivity extends AppCompatActivity
         setContentView(R.layout.activity_second);
 
         //update the screen
-//        updateView();
+        updateView();
     }
 
     public void updateView()
@@ -31,15 +31,15 @@ public class secondActivity extends AppCompatActivity
         int numberOfYears = intent.getIntExtra("numberOfYears",0);
         int investmentRate = intent.getIntExtra("investmentRate",0);
 
-        String line="here";
+        String line="";
         int total = currentPrincipal;
+        int investRetur =0;
         //do calculation
         for(int x = 0 ; x < numberOfYears ; x++ )
         {
-            line += (x+1)+"     " + total+"\n";
-            total+= annualAddition;
-            int investRetur = total*(investmentRate/100);
-            total +=investRetur;
+            line += "  "+(x + 1) + "               " + total + "\n";
+            total += annualAddition;
+            total += total * (investmentRate / 100.0f);
         }
 
         //display the result of calculation

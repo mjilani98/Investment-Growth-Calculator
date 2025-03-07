@@ -87,6 +87,6 @@ public class MainActivity extends AppCompatActivity {
         secondActivity.putExtra("investmentRate",investmentRate);
 
         //call the second activity
-//        startActivity(secondActivity);
+        startActivity(secondActivity);
     }
 }
