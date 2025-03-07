@@ -1,19 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/soft_mint"
     tools:context=".MainActivity">
 
+    <!--Principal-->
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/txtViewPrincipal"
+        style="@style/TextViewStyle"
+        android:layout_marginTop="50dp"
+        android:text="Principal"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/InputPrincipal"
+        style="@style/EditTextStyle"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@id/txtViewPrincipal"
+        android:hint="Enter principal"
+        />
+    <!--Annual addition-->
+    <TextView
+        android:id="@+id/txtViewAnnualAddition"
+        style="@style/TextViewStyle"
+        android:layout_below="@id/txtViewPrincipal"
+        android:text="Annual addition"
+        />
+
+    <EditText
+        android:id="@+id/InputAnnualAddition"
+        style="@style/EditTextStyle"
+        android:layout_toEndOf="@id/txtViewAnnualAddition"
+        android:layout_below="@id/InputPrincipal"
+        android:hint="Enter annual add"
+        />
+
+    <!--Number of years-->
+    <TextView
+        android:id="@+id/txtViewNumberOfYears"
+        style="@style/TextViewStyle"
+        android:layout_below="@id/txtViewAnnualAddition"
+        android:text="Number of years"
+        />
+
+    <EditText
+        android:id="@+id/inputNumberYears"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/InputAnnualAddition"
+        android:layout_toEndOf="@id/txtViewNumberOfYears"
+        android:hint="Enter years"
+        />
+
+    <!--Investment rate return-->
+    <TextView
+        android:id="@+id/txtViewInvestmentRate"
+        style="@style/TextViewStyle"
+        android:layout_below="@id/txtViewNumberOfYears"
+        android:text="Investemnt rate"
+        />
+
+    <EditText
+        android:id="@+id/InputInvestmentRate"
+        style="@style/EditTextStyle"
+        android:layout_below="@id/inputNumberYears"
+        android:layout_toEndOf="@id/txtViewInvestmentRate"
+        android:hint="Enter rate"
+        />
+
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txtViewInvestmentRate"
+        android:layout_marginTop="30dp"
+        android:text="Calculate"
+        android:textSize="30dp"
+        android:backgroundTint="@color/deep_plum"
+        android:onClick="calculate"
+        />
+
+
+</RelativeLayout>
