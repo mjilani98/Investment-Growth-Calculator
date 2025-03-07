@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/soft_mint"
+    tools:context=".MainActivity">
+
+<!--Year-->
+
+    <TextView
+        android:id="@+id/lblYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year"
+        android:textSize="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:background="@color/Ivory"/>
+
+    <ScrollView
+        android:id="@+id/yearScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
+        android:layout_below="@id/lblYear"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp">
+
+        <TextView
+            android:id="@+id/outputResults"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            />
+
+    </ScrollView>
+
+
+<!--Amount-->
+
+    <TextView
+        android:id="@+id/lblAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/lblYear"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:text="Amount"
+        android:textSize="35dp"
+        android:background="@color/Ivory"
+        />
+
+
+<!--Back button-->
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yearScrollView"
+        android:layout_centerHorizontal="true"
+        android:text="Back"
+        android:textSize="35dp"
+        android:backgroundTint="@color/deep_plum"
+        android:onClick="back"/>
+
+
+
+
+
+</RelativeLayout>
